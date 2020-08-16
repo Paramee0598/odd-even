@@ -2,24 +2,28 @@
 #include<stdio.h> 
 #include<conio.h>
 
-const  float P = 3.14285714;
-float caba(float r)
+int caba(int n)
 {
-	return P * r * r;
+	return  n % 2 ;
 }
 
 int main()
 {
-	float R;
-	R = 0;
+	int N;
+	N = 0;
 
-	printf("input circle radius  : ");
-	scanf("%f", &R);
+	printf("input Number for check : ");
+	scanf("%d", &N);
 
-	float area;
-	area = 0;
-	area = caba(R);
-	printf("area circle = %f", area);
+	int a;
+	a = 0;
+	a = caba(N);
+	if (a == 1)
+	{
+		printf(" %d is odd ",N);
+	}
+	else 
+		printf(" %d is even ", N);
 
 	return 0;
 }
